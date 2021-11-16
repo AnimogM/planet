@@ -6,6 +6,7 @@ const AppProvider = ({ children }) => {
   const [isPlanetOpen, setIsPlanetOpen] = useState(false);
   const [isChararacterOpen, setIsChararacterOpen] = useState(false);
   const [active, setActive] = useState("")
+  const [name, setName] = useState("")
   const [activeChar, setActiveChar] = useState("")
 
   const openPlanet = (id) => {
@@ -17,7 +18,8 @@ const AppProvider = ({ children }) => {
     setIsPlanetOpen(false);
   };
 
-  const openChararacter = (id) => {
+  const openChararacter = (id, name) => {
+    setName(name)
     setActiveChar(id)
     setIsChararacterOpen(true);
   };
@@ -25,6 +27,7 @@ const AppProvider = ({ children }) => {
     setActiveChar()
     setIsChararacterOpen(false);
   };
+
 
 
   return (
@@ -37,7 +40,8 @@ const AppProvider = ({ children }) => {
         isChararacterOpen,
         openChararacter,
         closeChararacter,
-        activeChar
+        activeChar,
+        name
       }}
     >
       {children}

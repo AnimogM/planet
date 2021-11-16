@@ -20,8 +20,8 @@ const NavBar = () => {
                 <Tab eventKey="character" tabClassName="text-secondary  fw-600"  title="CHARACTERS">
                     <CharacterProvider>
                         <Character/>
+                        <CharDetail/>
                     </CharacterProvider>
-                    <CharDetail/>
                 </Tab>
             </Tabs>
         </div>

@@ -21,7 +21,7 @@ const Character = () => {
                 {charList.map(item => {
                 return(
                     <div key={item.id} className="relative">
-                        <div onClick={() => openChararacter(item.id)} className={`${activeChar === item.id? "carde cursor carde-active cHeight": "carde cursor cHeight"}`}>
+                        <div onClick={() => openChararacter(item.id, item.name)} className={`${activeChar === item.id? "carde cursor carde-active cHeight": "carde cursor cHeight"}`}>
                             <div className="text-center"><img className="img-full" src={item.img} alt={`character ${item.id}`}/></div>
                             <p className="pcolor mb-0 fw-600 px-3 pt-2">{item.name}</p>
                             <p className="text-secondary fs-12 pb-3 px-3">23 friends</p>

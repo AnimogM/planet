@@ -29,6 +29,7 @@ const Planet = () => {
                         </div>    
                     )
                 })}       
+                
             </div>
             <AddPlanet show={modalShow} onHide={() => setModalShow(false)}/>
         </div>

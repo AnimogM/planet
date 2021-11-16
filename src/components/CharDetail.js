@@ -5,8 +5,7 @@ import Friends from './FriendsList';
 import Image from './Image'
 
 const CharDetail = () => {
-    const { isChararacterOpen, closeChararacter } = useGlobalContext();
-
+    const { isChararacterOpen, closeChararacter, name } = useGlobalContext();
     const cList = [
         { id: 1, img: Image.character9, friends: "Amet minim mollit non deserunt ullamco est", name:"Eleanor Pena"},
         { id: 2, img: Image.character16, friends: "Amet minim mollit non deserunt ullamco est", name:"Brooklyn Simmons"},
@@ -24,8 +23,8 @@ const CharDetail = () => {
                         <BsXLg/>
                     </span>
                 </div>
-                <h3 className="fw-800 fs-2 my-3">Jane Cooper</h3>
-                <p className="text-secondary pt-1">Jane is really a nice person. She’s been living on planet Alpha for the last 10 years.</p>
+                <h3 className="fw-800 fs-2 my-3">{name}</h3>
+                <p className="text-secondary pt-1">{name.match(/[^\s]+/)} is really a nice person. Has been living on planet Alpha for the last 10 years.</p>
                 <div className="d-flex gap-5">
                     <div>
                         <p className="my-1">Planet</p>
